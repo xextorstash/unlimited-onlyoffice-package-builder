@@ -54,14 +54,14 @@ jobs:
         run: |
           sudo apt-get clean
           df -h
-      - name: Free Space - Show docker images
-        run: |
-          docker image ls -a
-          df -h
-      - name: Free Space - Remove docker images
-        run: |
-          docker rmi $(docker image ls -aq)
-          df -h
+      # - name: Free Space - Show docker images
+      #   run: |
+      #     docker image ls -a
+      #     df -h
+      # - name: Free Space - Remove docker images
+      #   run: |
+      #     docker rmi $(docker image ls -aq)
+      #     df -h
       - name: Check out the repo
         uses: actions/checkout@v4
       - name: Split branch name
